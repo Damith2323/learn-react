@@ -10,13 +10,16 @@ class App extends Component {
       { name: "Hype", age: 25, belt: "Black", id: 3 }
     ]
   };
+  addNinja = ninja => {
+    console.log(ninja);
+  };
   render() {
     return (
       <div className="App">
         <h1>My first React App</h1>
         <p>Welcome</p>
         <Ninjas ninjas={this.state.ninjas} />
-        <AddNinja />
+        <AddNinja addNinja={this.addNinja} />
       </div>
     );
   }
